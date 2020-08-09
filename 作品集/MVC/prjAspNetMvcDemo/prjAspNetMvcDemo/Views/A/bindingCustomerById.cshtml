@@ -1,0 +1,34 @@
+﻿@model tdCustomer
+@{
+    ViewBag.Title = "bindingCustomerById";
+}
+
+<h2>客戶資料查詢結果 ( 繫結版 ) </h2>
+<hr />
+@*<p><img src="~/Content/@(ViewBag.ii).jpg" width="400" height="300" /></p>*@
+<p>
+    @{
+        string photoName = "0.jpg";
+        if(Model != null)
+        {
+            photoName = Model.fId.ToString() + ".jpg";
+        }
+    }
+    <img src="~/Content/@photoName" width="400" height="300" />
+</p>
+@{
+    if (Model == null)
+    {
+        @:沒有客戶資料
+    }
+    else
+    {
+        @:客戶姓名：@Model.fName
+        <p>
+            客戶電話：@Model.fPhone
+        </p>
+    }
+
+}
+
+

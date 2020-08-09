@@ -1,0 +1,95 @@
+﻿@model List<prjAspNetMvcDemo.tShoppingCart>
+
+@{
+    ViewBag.Title = "CartView";
+    int count = 0;
+    double pay=0;
+}
+@functions{
+    public string formatDateTime(string datetime)
+    {
+        return datetime.Substring(0, 4) + "/" +
+            datetime.Substring(4, 2) + "/" +
+            datetime.Substring(6, 2) + "/" +
+            datetime.Substring(8, 2) + ":" +
+            datetime.Substring(10, 2) + ":" +
+            datetime.Substring(12, 2);
+    }
+    public string getProductName(int fId)
+    {
+        dbLinqDemoEntities db = new dbLinqDemoEntities();
+        tdProduct prod = db.tdProduct.FirstOrDefault(p => p.fId == fId);
+        string s = "商品名稱未建檔";
+        if (prod != null)
+            s = prod.fName;
+        return s;
+    }
+}
+
+<h2>檢視購物車</h2>
+
+<p>
+    @Html.ActionLink("結帳", "PayProcess")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            序號
+        </th>
+        <th>
+            日期
+        </th>
+        <th>
+           購買商品
+        </th>
+        <th>
+            數量
+        </th>
+        <th>
+            金額
+        </th>
+        <th>
+            小計
+        </th>
+    </tr>
+
+@foreach (var item in Model) {
+
+    count++;
+    double sum=(double)(item.fPrice * item.fCount);
+    pay+=sum;
+<tr>
+    <td>
+       @count.ToString()
+    </td>
+    <td>
+        @formatDateTime(item.fDate)
+    </td>
+    <td>
+        @getProductName((int)item.fProductId)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.fCount)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.fPrice)
+    </td>
+    <td>
+        @sum
+    </td>
+    <td>
+        @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+        @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+    </td>
+</tr>
+}
+
+</table>
+
+@{ 
+    string realPay = (pay * 1.05).ToString("0");
+    string tax = (pay * 0.05).ToString("0");
+}
+<li>交易金額：$@pay</li>
+<li>稅　　額：$@tax</li>
+<li>應付金額：$@realPay</li>

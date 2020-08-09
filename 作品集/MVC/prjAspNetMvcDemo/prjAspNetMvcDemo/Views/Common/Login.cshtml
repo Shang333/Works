@@ -1,0 +1,32 @@
+﻿
+@{
+    ViewBag.Title = "Login";
+    string s1 = "c"+ViewBag.CODE.Substring(0, 1) + ".png";
+    string s2 = "c" + ViewBag.CODE.Substring(1, 1) + ".png";
+    string s3 = "c" + ViewBag.CODE.Substring(2, 1) + ".png";
+    string s4 = "c" + ViewBag.CODE.Substring(3, 1) + ".png";
+}
+
+<h2>Login</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+<div class="form-horizontal">
+    <div class="col-md-offset-2 col-md-10">
+        帳號
+        <input type="text" hint="關鍵字" class="form-control" name="txtAccount" />
+        密碼
+        <input type="text" hint="關鍵字" class="form-control" name="txtPassword" />
+        驗證碼
+        <input type="text" hint="關鍵字" class="form-control" name="txtCode" />
+        <img src="~/Content/@s1" width="40"/>
+        <img src="~/Content/@s2" width="40" />
+        <img src="~/Content/@s3" width="40" />
+        <img src="~/Content/@s4" width="40" />
+    </div>
+    <div class="col-md-offset-2 col-md-10">      
+        <input type="submit" value="登入" class="btn btn-default" />
+    </div>
+</div>
+}

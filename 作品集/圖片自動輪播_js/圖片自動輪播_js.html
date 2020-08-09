@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HW4 廣告輪播</title>
+    <style>
+        @font-face {
+            font-family: 'openhuninn';
+            src: url('font/jf-openhuninn-1.1.ttf') format("truetype");
+        }
+        .containier {
+            font-family: openhuninn;
+            width: 700px;
+            margin: 50px auto;
+            display: flex;
+            justify-content: center;
+            position: relative;
+            background-image: url("image/background.jpg");
+            border-radius: 10px;
+            padding: 5px;
+        }
+        h2 {
+            padding-left: 10px;
+            color: #655753;
+        }
+        .petimg{
+            width : 400px;
+            border:1px solid white;
+            border-radius:10px;
+        }
+        .numImage {
+            display: flex;
+            justify-content: center;
+            cursor:pointer;
+        }
+        .numImage>img {
+            width: 30px;
+            padding: 0 5px;
+            -webkit-filter: saturate(80%);
+            /* Safari */
+            filter: saturate(80%);
+        }
+        .clsStopPlay {
+            display: flex;
+            justify-content: center
+        }
+        .clsStopPlay>img {
+            width: 25px;
+            position: absolute;
+            top: 577px;
+            opacity: 0.8;
+            cursor:crosshair;
+        }
+        .clsNextRight>img {
+            width: 18px;
+            height: 35px;
+            position: absolute;
+            top: 342px;
+            left: 530px;
+            --webkit-filter: opacity(90%);
+            opacity: 0.9;
+            cursor:crosshair;
+        }
+        .clsNextLeft>img {
+            width: 18px;
+            height: 35px;
+            position: absolute;
+            top: 342px;
+            left: 162px;
+            --webkit-filter: opacity(90%);
+            opacity: 0.9;
+            cursor:crosshair;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="containier">
+        <div class="backgroungImg">
+            <h2>我在找一個家 . . .</h2>
+            <div><a href="" id="link" title="點擊照片看故事" target="_blank"><img alt="" id="picture" /></a>
+            </div>
+            <figure class="numImage">
+                <img alt="" id="num1" src="image1/A1.png" />
+                <img alt="" id="num2" src="image1/A2.png" />
+                <img alt="" id="num3" src="image1/A3.png" />
+                <img alt="" id="num4" src="image1/A4.png" />
+                <img alt="" id="num5" src="image1/A5.png" />
+                <img alt="" id="num6" src="image1/A6.png" />
+            </figure>
+            <div class="clsStopPlay"><img alt="" id="btnStopPlay" title="暫停/播放照片" src="image1/pause-1.png"/></div>
+            <div class="clsNextRight"><img alt="" id="btnNextRight" src="image1/nextR.png"/></div>
+            <div class="clsNextLeft"><img alt="" id="btnNextLeft" src="image1/nextL.png"/></div>
+        </div>
+    </div>
+    <script>
+        var picindex = 0;
+        var arrHref = ["https://www.facebook.com/doghome/photos/a.129057530454110/3339146376111860/?type=3&theater",
+            "https://www.facebook.com/doghome/photos/a.129057530454110/3657860760907085/?type=3&theater",
+            "https://www.facebook.com/doghome/photos/a.129057530454110/3739249846101509/?type=3&theater",
+            "https://www.facebook.com/doghome/photos/a.129057530454110/3260599980633167/?type=3&theater",
+            "https://www.facebook.com/doghome/photos/a.129057530454110/3494810780545418/?type=3&theater",
+            "https://www.facebook.com/doghome/photos/a.129057530454110/3581213761905119/?type=3&theater"]
+
+        //數字隨圖片輪播切換
+        function setNumImage() {
+            let numImage = document.querySelectorAll(".numImage>img");
+            for (let i = 1; i < 7; i++) {
+                if (i == picindex) {
+                    numImage[i- 1].src = "image1/A" + picindex + "change.png";
+                }
+                else {
+                    numImage[i - 1].src = "image1/A" + i + ".png";
+                }
+            }
+        }
+
+        //設定圖片輪播
+        function setImage() {
+            picindex += 1;
+            if (picindex > 6) {
+                picindex = 1;
+            }
+            document.querySelector("#link").href = arrHref[picindex - 1];
+
+            let a = document.querySelector("#picture");
+            a.src = "image1/" + picindex + ".jpg";
+            a.className="petimg";
+           
+            setNumImage();
+        }
+        setImage();
+        let timeID = setInterval(setImage, 2000);
+
+        //設定功能按鈕(連結事件)
+        document.getElementById("btnStopPlay").addEventListener("click", stopplayPic);
+        document.getElementById("btnNextRight").addEventListener("click", nextPic);
+        document.getElementById("btnNextLeft").addEventListener("click", previousPic);
+
+        //點數字標籤跳圖片的功能
+        let numImage1 = document.querySelectorAll(".numImage>img");
+        for (let i = 1; i < 7; i++) {
+            numImage1[i - 1].addEventListener("click", function () {
+                document.getElementById("picture").src = "image1/" + i + ".jpg"; 
+                picindex = i; 
+                setNumImage();
+                clearTimeout(timeID);
+                document.querySelector("#btnStopPlay").src = "image1/play-1.png";
+                document.querySelector("#link").href = arrHref[picindex - 1];
+            })
+        }
+
+        //play/stop按鈕的開關功能函式
+        var clickindex = 0;//圖片輪播為開啟狀態
+        function stopplayPic() {
+            if (clickindex == 0) {
+                document.querySelector("#btnStopPlay").src = "image1/play-1.png";
+                clearTimeout(timeID);
+                clickindex = 1;//圖片輪播為關閉狀態
+            }
+            else {
+                document.querySelector("#btnStopPlay").src = "image1/pause-1.png";
+                setImage();
+                timeID = setInterval(setImage, 2000);
+                clickindex = 0; //圖片輪播為開啟狀態
+            }
+        }
+
+        //下一張的功能函式
+        function nextPic() {
+            picindex += 1;
+            document.querySelector("#link").href = arrHref[picindex - 1];
+            document.querySelector("#btnStopPlay").src = "image1/play-1.png";
+            clearTimeout(timeID);
+
+            if (picindex > 6) { picindex = 1; }
+            document.querySelector("#picture").src = "image1/" + (picindex) + ".jpg";
+
+            setNumImage();
+
+            if (picindex > 6) { picindex = 0; }
+        }
+
+        //上一張的功能函式
+        function previousPic() {
+            picindex -= 1;
+            document.querySelector("#link").href = arrHref[picindex - 1];
+            document.querySelector("#btnStopPlay").src = "image1/play-1.png";
+            clearTimeout(timeID);
+
+            if (picindex < 1) { picindex = 6; }//循環回到第六張圖片
+            document.querySelector("#picture").src = "image1/" + (picindex) + ".jpg";
+
+            setNumImage();         
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,24 @@
+﻿
+@{
+    ViewBag.Title = "AddToSession";
+}
+
+<h2>加入購物車 (Session版) </h2>
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    <input type="hidden" name="txtFid" value="@Model" />
+
+    <div class="form-horizontal">
+        <span>請輸入數量</span>
+        <p>
+            @Html.TextBox("txtCount")
+        </p>
+    </div>
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" value="購買" class="btn btn-default" />
+        </div>
+    </div>
+}
+

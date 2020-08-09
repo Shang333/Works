@@ -1,0 +1,18 @@
+﻿
+@{
+    ViewBag.Title = "mathDemo";
+}
+
+<h2>mathDemo</h2>
+<form method="post">
+    <p>
+        <input type="text" name="txtA" />x<sup>2</sup>+<input type="text" name="txtB" />x+<input type="text" name="txtC" />= 0
+    </p>
+    <p>
+        x = <span>@ViewBag.result</span>
+    </p>
+    <p>
+        <input type="submit" value="OK" />
+    </p>
+
+</form>

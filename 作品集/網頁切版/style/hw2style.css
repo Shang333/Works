@@ -1,0 +1,103 @@
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+
+.box {
+    padding: 350px 0;
+}
+
+.padd {
+    padding: 15px 60px;
+}
+
+.t1 {
+    padding: 50px 10px 35px 35px;
+}
+
+.t2 {
+    padding: 50px 35px 35px 35px;
+}
+
+.container-padding {
+    padding: 0 65px 0 30px;
+    margin: 0px;
+}
+
+.card {
+    padding: 0 0 35px 35px;
+    border-style: none;
+}
+
+.card-header {
+    justify-content: flex-start;
+}
+
+.card-title {
+    font-weight: bold;
+    font-size: smaller;
+}
+
+.card-text {
+    font-size: 14px;
+}
+
+.card-footer {
+    font-size: smaller;
+
+    border-color: #F0F0F0;
+}
+
+.footer-color {
+    color: #000000;
+}
+
+.f1 {
+    display: flex;
+    justify-content: space-between;
+}
+
+.bt-default {
+    display: inline-block;
+    position: relative;
+    border: 1px solid;
+    border-radius: 20px;
+    border-color: #DBE0DF;
+    color: #A6ABAB;
+    text-align: center;
+    padding: 5px 20px;
+}
+
+.footerpadding {
+    padding: 60px 65px 60px 80px;
+}
+.FooterRight{
+    text-align: right;
+    margin-top:25px;
+    /* font-size: 18px; */
+}
+.footerbottom {
+    padding: 25px 80px 20px 80px;
+    font-size: 14px;
+    border-top: 1px solid #E6EAEA;
+
+}
+@media (max-width: 1330px){
+    .rwdToptext{
+        text-align: left;
+        font-size: 0.8rem;
+        padding:10px 0px 0 35px;
+    }
+}
+@media (min-width: 576px) {
+    html{font-size: 100%;}
+    .card-group>.card {
+        flex-basis: 100%
+    }
+    .rwdFooterRight{
+     text-align: start;  
+    }
+    .footerbottom{
+        font-size: 0.8rem;
+    }
+}

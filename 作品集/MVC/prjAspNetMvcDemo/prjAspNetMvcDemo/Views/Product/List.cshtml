@@ -1,0 +1,75 @@
+﻿@model IEnumerable<prjAspNetMvcDemo.tdProduct>
+
+@{
+    ViewBag.Title = "List";
+}
+
+<h2>產品系統</h2>
+
+<p>
+    @Html.ActionLink("新增產品", "Create")
+</p>
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+     <div class="form-horizontal">
+         <div class="col-md-offset-2 col-md-10">
+             <input type="text" hint="關鍵字" class="form-control" name="txtKeyword" />
+             <input type="submit" value="搜尋" class="btn btn-default" />
+         </div>
+     </div>
+    }
+
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.fId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fQty)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fCost)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fPrice)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.flmagPath)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.fId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.fName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.fQty)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.fCost)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.fPrice)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.flmagPath)
+        </td>
+        <td>
+            @Html.ActionLink("修改", "Edit", new { id = item.fId }) |
+            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("刪除", "Delete", "Product",new{id=item.fId},new { OnClick="return confirm('確定要刪除嗎？')"})
+        </td>
+    </tr>
+}
+
+</table>

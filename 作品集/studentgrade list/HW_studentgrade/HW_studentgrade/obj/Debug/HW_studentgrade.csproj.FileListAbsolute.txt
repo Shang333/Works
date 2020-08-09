@@ -1,0 +1,40 @@
+C:\Users\iii\Desktop\C sharp\HW\HW_studentgrade\HW_studentgrade\bin\Debug\HW_studentgrade.exe.config
+C:\Users\iii\Desktop\C sharp\HW\HW_studentgrade\HW_studentgrade\bin\Debug\HW_studentgrade.exe
+C:\Users\iii\Desktop\C sharp\HW\HW_studentgrade\HW_studentgrade\bin\Debug\HW_studentgrade.pdb
+C:\Users\iii\Desktop\C sharp\HW\HW_studentgrade\HW_studentgrade\obj\Debug\HW_studentgrade.csprojAssemblyReference.cache
+C:\Users\iii\Desktop\C sharp\HW\HW_studentgrade\HW_studentgrade\obj\Debug\HW_studentgrade.Form1.resources
+C:\Users\iii\Desktop\C sharp\HW\HW_studentgrade\HW_studentgrade\obj\Debug\HW_studentgrade.Properties.Resources.resources
+C:\Users\iii\Desktop\C sharp\HW\HW_studentgrade\HW_studentgrade\obj\Debug\HW_studentgrade.csproj.GenerateResource.cache
+C:\Users\iii\Desktop\C sharp\HW\HW_studentgrade\HW_studentgrade\obj\Debug\HW_studentgrade.csproj.CoreCompileInputs.cache
+C:\Users\iii\Desktop\C sharp\HW\HW_studentgrade\HW_studentgrade\obj\Debug\HW_studentgrade.exe
+C:\Users\iii\Desktop\C sharp\HW\HW_studentgrade\HW_studentgrade\obj\Debug\HW_studentgrade.pdb
+C:\Users\iii\Desktop\C sharp\HW\HW_studentgrade_做實驗\HW_studentgrade\HW_studentgrade\obj\Debug\HW_studentgrade.csprojAssemblyReference.cache
+C:\Users\iii\Desktop\C sharp\HW\HW_studentgrade_做實驗\HW_studentgrade\HW_studentgrade\obj\Debug\HW_studentgrade.Form1.resources
+C:\Users\iii\Desktop\C sharp\HW\HW_studentgrade_做實驗\HW_studentgrade\HW_studentgrade\obj\Debug\HW_studentgrade.Properties.Resources.resources
+C:\Users\iii\Desktop\C sharp\HW\HW_studentgrade_做實驗\HW_studentgrade\HW_studentgrade\obj\Debug\HW_studentgrade.csproj.GenerateResource.cache
+C:\Users\iii\Desktop\C sharp\HW\HW_studentgrade_做實驗\HW_studentgrade\HW_studentgrade\obj\Debug\HW_studentgrade.csproj.CoreCompileInputs.cache
+C:\Users\iii\Desktop\C sharp\HW\HW_studentgrade_做實驗\HW_studentgrade\HW_studentgrade\obj\Debug\HW_studentgrade.exe
+C:\Users\iii\Desktop\C sharp\HW\HW_studentgrade_做實驗\HW_studentgrade\HW_studentgrade\obj\Debug\HW_studentgrade.pdb
+C:\Users\iii\Desktop\C sharp\HW\HW_studentgrade_做實驗\HW_studentgrade\HW_studentgrade\bin\Debug\HW_studentgrade.exe.config
+C:\Users\iii\Desktop\C sharp\HW\HW_studentgrade_做實驗\HW_studentgrade\HW_studentgrade\bin\Debug\HW_studentgrade.exe
+C:\Users\iii\Desktop\C sharp\HW\HW_studentgrade_做實驗\HW_studentgrade\HW_studentgrade\bin\Debug\HW_studentgrade.pdb
+C:\Users\iii\Desktop\C sharp\HW\HW_studentgrade list\HW_studentgrade\HW_studentgrade\bin\Debug\HW_studentgrade.exe.config
+C:\Users\iii\Desktop\C sharp\HW\HW_studentgrade list\HW_studentgrade\HW_studentgrade\bin\Debug\HW_studentgrade.exe
+C:\Users\iii\Desktop\C sharp\HW\HW_studentgrade list\HW_studentgrade\HW_studentgrade\bin\Debug\HW_studentgrade.pdb
+C:\Users\iii\Desktop\C sharp\HW\HW_studentgrade list\HW_studentgrade\HW_studentgrade\obj\Debug\HW_studentgrade.csprojAssemblyReference.cache
+C:\Users\iii\Desktop\C sharp\HW\HW_studentgrade list\HW_studentgrade\HW_studentgrade\obj\Debug\HW_studentgrade.Form1.resources
+C:\Users\iii\Desktop\C sharp\HW\HW_studentgrade list\HW_studentgrade\HW_studentgrade\obj\Debug\HW_studentgrade.Properties.Resources.resources
+C:\Users\iii\Desktop\C sharp\HW\HW_studentgrade list\HW_studentgrade\HW_studentgrade\obj\Debug\HW_studentgrade.csproj.GenerateResource.cache
+C:\Users\iii\Desktop\C sharp\HW\HW_studentgrade list\HW_studentgrade\HW_studentgrade\obj\Debug\HW_studentgrade.csproj.CoreCompileInputs.cache
+C:\Users\iii\Desktop\C sharp\HW\HW_studentgrade list\HW_studentgrade\HW_studentgrade\obj\Debug\HW_studentgrade.exe
+C:\Users\iii\Desktop\C sharp\HW\HW_studentgrade list\HW_studentgrade\HW_studentgrade\obj\Debug\HW_studentgrade.pdb
+D:\全端就業班\C#\HW\HW_studentgrade list\HW_studentgrade\HW_studentgrade\bin\Debug\HW_studentgrade.exe.config
+D:\全端就業班\C#\HW\HW_studentgrade list\HW_studentgrade\HW_studentgrade\bin\Debug\HW_studentgrade.exe
+D:\全端就業班\C#\HW\HW_studentgrade list\HW_studentgrade\HW_studentgrade\bin\Debug\HW_studentgrade.pdb
+D:\全端就業班\C#\HW\HW_studentgrade list\HW_studentgrade\HW_studentgrade\obj\Debug\HW_studentgrade.csprojAssemblyReference.cache
+D:\全端就業班\C#\HW\HW_studentgrade list\HW_studentgrade\HW_studentgrade\obj\Debug\HW_studentgrade.Form1.resources
+D:\全端就業班\C#\HW\HW_studentgrade list\HW_studentgrade\HW_studentgrade\obj\Debug\HW_studentgrade.Properties.Resources.resources
+D:\全端就業班\C#\HW\HW_studentgrade list\HW_studentgrade\HW_studentgrade\obj\Debug\HW_studentgrade.csproj.GenerateResource.cache
+D:\全端就業班\C#\HW\HW_studentgrade list\HW_studentgrade\HW_studentgrade\obj\Debug\HW_studentgrade.csproj.CoreCompileInputs.cache
+D:\全端就業班\C#\HW\HW_studentgrade list\HW_studentgrade\HW_studentgrade\obj\Debug\HW_studentgrade.exe
+D:\全端就業班\C#\HW\HW_studentgrade list\HW_studentgrade\HW_studentgrade\obj\Debug\HW_studentgrade.pdb
